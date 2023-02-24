@@ -27,4 +27,9 @@ public class DemoController {
     public String upload(MultipartFile file) throws Exception {
         return minioUtil.uploadFile("demo", file.getOriginalFilename(), file.getInputStream());
     }
+    
+    @PostMapping("test")
+    public String test() throws Exception {
+        return "hello";
+    }
 }
